@@ -1,0 +1,40 @@
+<script>
+    function f1(){
+        var methods = [function(){return "Hello.......!"},function(a,b){return a+b}];    //without destruction
+        var m1 = methods[0];
+        var m2 = methods[1];
+        document.write(m1()+"<br>");
+        document.write(m2(202,20)+"<br>");   //with destrucation
+        var [x1,x2] = methods;
+        document.write(x1()+"<br>");
+        document.write(x2(202,20));
+    }
+    f1();
+</script>
+
+
+<script>
+    function f1(){
+        var products = ["jgl","bed"];   //without destruction
+        var speaker = products[0];
+        var bed = products[1];   
+        // with destruction
+        var [spk,bed]=products;
+        document.write( bed);
+    }
+    f1();
+</script>
+
+
+
+
+
+
+
+<script>
+    function f1(){
+        var values = [[10,550,300],["A","B"]];
+        document.write(values[0][1][2]);
+    }
+    f1();
+</script>

@@ -1,0 +1,13 @@
+<script>
+    function f1(){
+        var sale=[2000,3500,4500,1000,5000];
+        function search(val){
+            return val>=1000;
+        }
+        var result = sale.filter(search);
+        result.sort();
+        
+        document.write(result.toString());
+    }
+    f1();
+</script>

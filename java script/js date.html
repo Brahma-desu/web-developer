@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date</title>
+        <style>
+            .caontainer{
+                width:600px;
+                height:400px;
+                justify-content:center;
+                align-items:center;
+                margin:auto
+            }
+        </style>
+        <script>
+            function bodyload(){
+                var now=new Date();
+                var hrs=now.getHours();
+                var pic=document.getElementById("pic");
+                if(hrs>=00 && hrs<=12){
+                    pic.src="../web developer/morning.gif";
+
+                }else if(hrs>12 && hrs<=17){
+                    pic.src="../web developer/afternoon.gif";
+                }else{
+                    pic,src="../web developer/evening,gif";
+                }
+            }
+        </script>
+    </head>
+    <body onload="bodyload()">
+        <div class="container">
+            <img id="pic" width="300" height="300">
+        </div>
+    </body>
+</html>

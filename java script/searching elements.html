@@ -1,0 +1,36 @@
+ <script>
+     function f1(){
+         var demo = [function(){return "Hello mr.AA"},function(a,b){return a+b}];
+         var demo1 = demo[0];
+         var demo2 = demo[1];
+         document.write(demo1()+"<br>");
+         document.write(demo2(10,30));
+         //with Array Destruction
+         var [x1,x2]= demo;
+         document.write(x1()+"<br>");
+         document.write(x2(20,40));
+     }
+     f1();
+ </script>  
+
+
+ <hr>
+
+ <html>
+    <head>
+        <title>Sort Array</title>
+        <script>
+            var numbers = ["j,t,d,u,a,c,b,f,e,h,g"];
+            document.write("demo").innerHTML = numbers;
+            function myfunction(){
+                numbers.reverse();
+                document.getElementById("demo").innerHTML = numbers;
+            }
+        </script>
+    </head>
+    <body>
+      <h2>Sort Array Function</h2>
+      <button onclick="myfunction()">Submit</button>
+      <p id="demo"></p>
+    </body>
+</html> 

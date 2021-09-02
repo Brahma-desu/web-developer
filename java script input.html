@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        
+        <script>
+               "use strict";
+               function bodyload(){
+                   user Name=prompt("Enter Name");
+                   document.getElementById("msg").innerHTML="Hello....."+ Username;
+                   if(Username=="null"){
+                         document.getElementById("msg").innerHTML="you cancle"
+
+                   }else if(Username==""){
+                       document.getElementById("msg").innerHTML="Name can't"
+
+                   }
+                   function Createclick(){
+                       folderName=prompt("Enter folder Name");
+                       if(folderName=="null"){
+                              document.write("you Cancle");
+                       }else if(folderName==""){
+                           document.write("Name Can't be empty");
+                       }
+                       
+                   }
+               }
+                 
+        </script>
+    </head>
+    <body class="container-fluide" onload="bodyload">
+        <h2 id="heading"></h2>
+        <div class="form-group">
+            <button onclick="Createclick">Create Folder</button>
+        </div>
+        <div class="form-group">
+            <p id="msg"></p>
+        </div>
+
+
+    </body>
+</html>

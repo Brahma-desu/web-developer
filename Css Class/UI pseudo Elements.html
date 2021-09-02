@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Required</title>
+        <style>
+            .form-group {
+                margin-top: 20px;
+            }
+            label {
+                font-weight: bold;
+            }
+            input:invalid {
+                border:1px solid red;
+                box-shadow: 2px 2px 4px red;
+            }
+            input:valid {
+                border:1px solid goldenrod;
+                box-shadow: 2px 2px 4px gold;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="form-group">
+                <label>User Name</label>
+                <div>
+                    <input type="text" >
+                </div>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <div>
+                    <input type="password" required>
+                </div>
+            </div>
+        </form>
+    </body>
+</html>
+<hr>
+
+
+<html>
+   <head>
+       <title>UI Elements</title>
+       <style>
+        .form-group {
+            margin-top: 20px;
+        }
+        label {
+            font-weight: bold;
+        }
+        input:invalid {
+            border:1px solid red;
+            box-shadow: 2px 2px 4px red;
+        }
+        input:out-of-range {
+            border:1px solid goldenrod;
+            box-shadow: 2px 2px 4px gold;
+        }
+    </style>
+   </head>
+   <body>
+       <form>
+           <div class="form-group">
+               <label>Age</label>
+               <div>
+                   <input type="number" min="16" max="35">
+               </div>
+           </div>
+       </form>
+   </body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Verify Password</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <style>
+            progress{
+                height:50px;
+                width:100%;
+            }
+        </style>
+        <script>
+         function Verifypassword(){
+             var regExp=/(?=.*[A-Z])\w{4,10}/;
+             var txtpwd=document.getElementById("txtpwd").value;
+             var lblmsg=document.getElementById("lblmsg");
+             var grade=document.getElementById("grade");
+             grade.style.display="inline";
+             function GradeDisplay(mim,max,value){
+                 grade.min=min;
+                 grade.max=max;
+                 grade.value=value;
+             }
+             if(txtpwd.match(regExp)){
+                 lblmsg.innerHTML="Strong Password".fontcolor('green').bold()
+                             GradeDisplay(1,100,100);
+             }else{
+                 if(txtpwd.length<4){
+                     lblmsg.innerHTML="Poor Password";
+                     GradeDisplay(1,100,20)
+                 }else{
+                     lblmsg.innerHTML="weak Password";
+                     GradeDisplay(1,100,60);
+                 }
+             }
+         }
+        </script>
+    </head>
+    <body class="container-fluid">
+        <h2>Regular Expression</h2>
+        <div class="form-group">
+            <label>Password</label>
+            <div>
+                <input onkeyup="VerifyPassword()" id="txtpwd" type="password" class="form-control">
+                <div>
+                    <progress min="1" max="100" style="display:none;" id="grade"></progress>
+                    <span id="lblmsg"></span>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

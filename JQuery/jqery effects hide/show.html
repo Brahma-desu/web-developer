@@ -1,0 +1,21 @@
+<html>
+    <head>
+        <title>Hide/Show</title>
+        <script src="../node_modules/jquery/dist/jquery.js"></script>
+        <script>
+            $(function(){
+                $("#hide").click(function(){
+                    $("p").hide();
+                });
+                $("#show").click(function(){
+                    $("p").show();
+                });
+            });
+        </script>
+    </head>
+    <body>
+        <p>JQuery is Most Popular Java Script Library and also Jqery is very fast...</p>
+        <button id="hide">Hide Text</button>
+        <button id="show">Show Text</button>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>string demo</title>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script>
+            function verifyName(){
+                var txtname = document.getElementById("txtname").value;
+                var msg = document.getElementById("msg");
+                var firstCharCode=txtname.charCodeAt(0);
+                if(firstCharCode>=65&&firstCharCode<=90){
+                             msg.innerHTML=";"
+                }else{
+                    msg.innerHTML="Name must start with Uppercase letter";
+                }
+                        }
+                        function verifycard(){
+                                var txtcard = document.getElementById(txtcard).value;
+                                var firstChar = txtcard.cahrAt(0);
+                                var cardLogo=document.getElementById("cardLogo");
+                                if(firstChar=="4"){
+                                    cardLogo.src="../web developer/jbl.jpg";
+                                }else if(firstChar=="5"){
+                                    cardLogo.src="../web developer/tv.jpg";
+
+                                }else{
+                                    cardLogo.src="../web developer/tree,jpg";
+                                }
+                        }
+        </script>
+    </head>
+    <body class="container-fluid">
+         <div class="form-group">
+             <label>User Name</label>
+             <div>
+                 <input onblur="verifyName()" class="form-control" placeholder="Name must Start with Uppercase Letter" type="text" id="txtname">
+                 <div id="msg" class="text-danger"></div>
+             </div>
+         </div>
+         <div class="form-group">
+             <label>Card Number</label>
+             <div class="input-group">
+                 <input onkeyup="verifycard()" type="text" id="txtcard" class="form-control" placeholder="Enter Your Card Number">
+                 <div class="input-group-append">
+                     <span class="input-group-text">
+                         <img id="cardLogo" width="50" height="20">
+                     </span>
+                 </div>
+             </div>
+         </div>
+         <div class="form-group">
+             <label>Email</label>
+             <div>
+                 <input onblur="verifyEmail()" id="txtEmail" type="text" class="form-control" placeholder="Enter Your Email Id">
+                 <div id="emailError">
+
+                 </div>
+             </div>
+         </div>
+    </body>
+</html>

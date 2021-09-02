@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Consoles</title>
+        <script type="text/javascript">
+             function DeleteClick(){
+                 x = confirm("Are you sure want to Delete...?");
+                 console.info("Delete initiated");
+                 if(x==true){
+                     console.error("Delete Completed");
+                     document.getElementById("msg").outerHTML="<h2><font color='red'>Record Deleted</font></h2>";
+
+                 }else{
+                     alert("Canceled....");
+                    console.warn("Canceld action"); 
+                 }
+             }
+        </script>
+    </head>
+    <body>
+        <button onclick="DeleteClick()">Delete</button>
+        <p align="center" id="msg"></p>
+    </body>
+</html>

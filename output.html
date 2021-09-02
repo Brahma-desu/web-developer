@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>ript output</title>
+        <style>
+            .btn{
+                background-color: rgb(233, 50, 193);
+            }
+            .effects{
+                background-color: cadetblue;
+            }
+        </style>
+        <script>
+            function deleteClick(){
+                x=confirm("Are you sure want to delete....?");
+                if(x==true){
+                    document.write("Record Deleted");
+
+                }else{
+                    alert("Canceled.....!");
+                }
+
+            }
+        </script>
+    </head>
+    <body class="effects">
+        <button class="btn" onclick="deleteClick()">Delete</button>
+        <p id="msg" align="center"></p>
+    </body>
+</html>

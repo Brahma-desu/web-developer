@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Simple Decision</title>
+        <script>
+            var users=[
+              {UserName:'rama',Password:'rama12345'},
+              {UserName:'raju',Password:'raju12345'},          
+            ];
+            function Loginclick(){
+                var txtname= document.getElementById("txtname").value;
+                var txtpwd= document.getElementById("txtpwd").value;
+                var msg= document.getElementById("msg");
+                for(var user of users){
+                    if(user.UserName==txtname && user.Password==txtpwd){
+                        location.href="find array.html";
+
+                    }
+                    
+                
+                else{
+                    msg.innerHTML="Invalid User Name or Password".fontcolor('red');
+                }
+            }
+            
+            }
+        </script>
+    </head>
+    <body>
+        <dl>
+            <dt>User Name</dt>
+            <dd><input id="txtname" type="text"></dd>
+            <dt>Password</dt>
+            <dd><input id="txtpwd" type="password"></dd> 
+        </dl>
+        <button onclick="Loginclick()">
+             Login
+        </button>
+        <div>
+            <h2 id="msg" align="center"></h2>
+        </div>
+    </body>
+</html>

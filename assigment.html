@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>jquary Demo</title>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+        <script>
+            $(function (){
+                $("#btnshow").click(function(){
+                    $("#msg").html(`Welcome to jquary`);
+                })
+            })
+        </script>
+    </head>
+    <body>
+        <button id="btnshow">Show Message</button>
+        <h2 id="msg"></h2>
+    </body>
+</html>

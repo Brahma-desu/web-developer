@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>Combinator Selectors</title>
+        <style>
+           tbody > tr{
+               background-color:red;
+           }
+           thead > tr{
+                 background-color:coral;
+                 color:black;
+           }
+        </style>
+    </head>
+    <body>
+        <table border="2px solid yellow" width="300">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>TV</td>
+                    <td>39,999/-</td>
+                </tr>
+                <tr>
+                    <td>Laptop</td>
+                    <td>60,000/-</td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
+
+
+
+
+<hr>
+
+<html>
+    <head>
+        <title>Inline</title>
+        <style type="text/css">
+          div > p {
+              color:red;
+          }
+        </style>
+     </head>
+    <body>
+       <div>
+           <p>Para-1</p>
+       </div>
+       <div>
+           <span>
+               <p>Para-2</p>
+           </span>
+       </div>
+    </body>
+</html>
+
+
+<hr>
+
+<html>
+    <head>
+        <style>
+           h2+p{
+               color:blue;
+           }
+        </style>
+    </head>
+    <body>
+        <h2>HTML ELEMENTS</h2>
+        <p>Para--1</p>
+        <p>Para--2</p>
+        <p>Para--3</p>
+        <p>Para--4</p>
+        <p>Para--5</p>
+    </body>
+</html>

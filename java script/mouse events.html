@@ -1,0 +1,27 @@
+
+<html>
+    <head>
+        <title>Mouse</title>
+        <script>
+            function ad1(){
+                document.getElementById("pic").src="../jbl.jpg";
+            }
+            function ad2(){
+                document.getElementById("pic").src="../book.jpg";
+            }
+            function Showoffer(){
+                document.getElementById("offer").src="../laptop.jpg";
+            }
+            function Hideoffer(){
+                document.getElementById("offer").src="../chair.jpg";
+            }
+        </script>
+    </head>
+    <body>
+        <img id="pic" onmouseover="ad1()" onmouseout="ad2()" src="../book.jpg" height="300" width="400">
+        <p>Mouse over to change Ad..</p>
+        <div>
+            <img onmousedown="Showoffer()" onmouseup="Hideoffer()" id="offer" src="../chair.jpg">
+        </div>
+    </body>
+</html>

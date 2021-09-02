@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Compare</title>
+        <script>
+            function verifypassword(){
+                var pwd=document.getElementById(txtpwd).value;
+                var cpwd=document.getElementById(txtconfirm).value;
+                var result=pwd.localeCompare(cpwd);
+                var lblError=document.getElementById(lblError);
+                lblError.innerHTML=(result==0)?"<font color='green'>Password Verified</font>":"<font color='red'>Password Mismatch</font>";
+
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <label>Password</label>
+            <div>
+                <input type="password" id="txtpwd">
+            </div>
+        </div>
+        <div>
+            <label>Confirm Password</label><br>
+            <input type="password" id="txtconfirm" onblur="verifypassword()">
+            
+        </div>
+        <div>
+            <button id="lblError"> Submit</button>
+        </div>
+    </body>
+</html>

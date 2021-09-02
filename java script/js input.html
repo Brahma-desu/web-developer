@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Java Script Input properties</title>
+        <script>
+            function CreateClick(){
+                product = prompt("Enter Product Name");
+                if(product == null){
+                    document.write("You Cancelled");
+                }else if(product ==""){
+                    document.write("Name Can't be empty");
+                }else{
+                    document.getElementById("msg").innerHTML = "Created Folder Name:"+product +"<br>";
+                }
+            }
+        </script>
+    </head>
+    <body class="container-fluid" onload="bodyload()">
+        <h2 id="heading"></h2>
+        <div class="form-group">
+            <button onclick="CreateClick()" class="btn btn-primary">Create Folder</button>
+        </div>
+        <div class="form-group">
+            <p id="msg"></p>
+        </div>
+    </body>
+</html>

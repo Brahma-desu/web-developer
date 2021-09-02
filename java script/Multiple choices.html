@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Multiple Choices</title>
+        <script>
+            var User={
+            UserName='Dhanush',
+            Password='Dhanush123',
+            Phone='9381646025'
+
+            };
+            function LoginClick(){
+                var txtName = document.getElementById("txtName").value;
+                var txtpwd = document.getElementById("txtpwd").value;
+                var msg = document.getElementById("msg");
+                if(User.UserName==txtName){
+                    if(User.Password==txtpwd){
+                        document.write("Login Success With User Name="+txtName);
+
+                    }else{
+                        msg.innerHTML="Invalid Password";
+                    }
+                }else{
+                    msg.innerHTML="Please Enter Valid User Name or Phone Number";
+                }
+
+            }
+        </script>
+    </head>
+    <body align="center" style="background-color: rgb(128, 115, 99); border:2px;">
+        <dl>
+            <dd>User Name or Phone Number</dd>
+            <dt><input type="text" id="txtname" placeholder="User Name/Phone Number"></dt>
+             <dd>Enter Your Password</dd>
+             <dt><input id="txtpwd" type="password" placeholder="Enter Your Password"></dt>
+        </dl>
+        <button onclick="LoginClick()">Submit</button>
+        <div>
+            <h1 id="msg" align="center"></h1>
+        </div>
+    </body>

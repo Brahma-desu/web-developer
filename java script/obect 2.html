@@ -1,0 +1,17 @@
+<script>
+    function f1(){
+        var products = [
+        {productName:"TV",productPrice:"29,999/-",Cities:"Hyd",Category:"Electronics"},
+        {productName:"Pens",productPrice:"99/-",City:"ATP",Category:"Study"},
+        {productName:"Laptop",productPrice:"60,000/-",Cities:['Hyd','Bang'],Category:"Electronics"},
+        {productName:"Books",productPrice:"1,999/-",City:"Kadapa",Category:"Study"},
+        ];
+        let result = products.filter(function(product){
+            return product.Category=="Study";
+        })
+        for(let item of  result){
+             document.write(item.productName +"---->"+ item.productPrice + "<hr>");
+        }
+    }
+    f1();
+</script>

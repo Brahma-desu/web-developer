@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+ <head>
+     <title>Refers html</title>
+     <script type="text/javascript">
+         function bodyload(){
+             x = document.getElementsByName("pay");
+              alert("Total Payment Methods:"+x.length);
+         }
+    </script>
+ </head>
+ <body onload="bodyload()">
+      <fieldset>
+          <legend>Payment</legend>
+          <input type="radio" name="pay" value="Cash">Cash<br>
+          <input type="radio" name="pay" value="UPI">UPI<br>
+          <input type="radio" name="pay" value="Credit Card">Credit Card<br>
+          <input type="radio" name="pay" value="Phone Pay">Phone Pay<br>
+          <input type="radio" name="pay" value="All Card recived">All Card are recived
+      </fieldset>
+ </body>
+</html>

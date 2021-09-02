@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Array Methods</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <script>
+            var categories = ["Electronics","Fashion","Footwear","Toys",];
+            function bodyload(){
+                var lstcategories = document.getElementById("lstcategories");
+                var optcategories = document.getElementById("optcateegories");
+                for(var item of categories){
+                    var li= document.createElement("li");
+                    li.innerHTML = item;
+                    lstcategories.appendChild(li);
+
+                    var option = document.createElement("option");
+                    option.text = item;
+                    option.value = item;
+                    optcategories.appendChild(option);
+                
+                }
+                
+            }
+        </script>
+    </head>
+    <body onload="bodyload()" class="container-fluid">
+         <div class="form-group">
+             <h3>Select a Category</h3>
+             <ol id="lstcategories">
+
+             </ol>
+         </div>
+         <div class="form-group">
+             <h3>Select Category</h3>
+             <select class="form-control" id="optcategories">
+
+             </select>
+         </div>
+    </body>
+</html>

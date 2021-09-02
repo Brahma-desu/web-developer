@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slide Show</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css">
+          <script type="text/javascript">
+           var products = ["../jbl.jpg","../bluetooth.jpg","../laptop.jpg","../bed.jpg","../book.jpg"];
+             var productName = ["JBL Speakers","Keyboard","Laptop","Bed","Books"];
+             function loadImages(index){
+                   var pic = document.getElementById("pic");
+                   pic.src = products[index];
+                   var lblName = document.getElementById("lblName");
+                   lblName.innerHTML = productNames[index];
+             }     
+             var index = 0;
+             function NextClick(){
+                 index++;
+                 loadImages(index);
+             }
+             function PreviousClick(){
+                 index--;
+                 loadImages(index);
+             }
+             function SlideShow(){
+                 var txtRange = document.getElementById(txtRange).value;
+                 loadImages(txtRange);
+             }
+        </script>
+    </head>
+    <body class="container-fluid" onload="loadImages()">
+       <div class="card">
+           <div class="card-header text-center">
+               <h3 id="lblname"></h3>
+           </div>
+           <div class="card-body text-center">
+               <button onclick="PreviousClick()" class="btn btn-outline-success">
+                   <span>&lt;</span>
+               </button>
+               <img id="pic" width="500" height="400">
+               <button onclick="NextClick()" class="btn btn-outline-success">
+                   <span>&gt;</span>
+               </button>
+           </div>
+           <div class="card-footer text-center">
+               <input onchange="SlideShow()" class="form-control-range" id="txtRange" type="range" min="0" max="3">
+
+           </div>
+       </div>
+    </body>
+</html>

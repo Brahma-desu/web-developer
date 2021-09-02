@@ -1,0 +1,33 @@
+<script>
+    var fun;
+    fun = function(){
+        return "Hello Mr.";
+    }
+    document.write(fun());   //Traditional function
+</script>
+
+
+<hr>
+
+<script>
+    let Zero;             //Arrow Or Lambad function
+    Zero = ()  =>{
+        return "Hello Mr.Arrow function";
+    }
+    document.write(Zero());
+</script>
+<hr>
+<script>
+    var hello = ()=>{
+        document.write("Hello ...!<br>");
+        document.write("Welcome to ")
+    };
+    hello();
+</script>
+<hr>
+<script>
+    var product = (name,price)=>{
+        document.write(`Name=${name}<br>price=${price}`)
+    }
+    product("Mobile",25000.00);
+</script>

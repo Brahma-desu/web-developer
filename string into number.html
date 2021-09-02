@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+        <script>
+            function calculate(){
+                var number1 = document.getElementById("number1").value;
+                var number2 = document.getElementById("number2").value;
+                document.getElementById("result").innerHTML=parseFloat(number1)+parseFloat(number2);
+            }
+        </script>
+        <style>
+            body{
+                background-color: cornsilk;
+                color: black;
+                text-align: center;
+                font-size: larger;
+                font-family: arial;
+                padding-top: 180px;
+            }
+        </style>
+    </head>
+    <body>
+        <dl>
+            <dt>First Number</dt>
+            <dd><input id="number1" placeholder="Number" type="text"></dd>
+            <dt>Second Number</dt>
+            <dd><input id="number2" placeholder="Number" type="text"></dd>
+        </dl>
+        <button onclick="calculate()">Calculator</button>
+        <p id="result"></p>
+    </body>
+</html>

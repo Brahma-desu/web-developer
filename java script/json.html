@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Slide Show</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../Fonts/css/all.css">
+        <script>
+            var products = [
+                {Name: "JBL Speaker", Price: 4500.55, Photo:"../jbl.jpg"},
+                {Name: "Earpods", Price: 2500.55, Photo: "../bluetooth.jpg"},
+                {Name: "Puma", Price: 6500.55, Photo: "../puma.jpg"},
+                {Name: "Reebok", Price: 1500.55, Photo: "../reebok.jpg"},
+            ];
+            function loadImage(index){
+                var pic = document.getElementById("pic");
+                pic.src= products[index].Photo;
+                var lblName = document.getElementById("lblName");
+                var lblPrice = document.getElementById("lblPrice");
+                lblName.innerHTML = products[index].Name;
+                lblPrice.innerHTML = "&#8377;" + products[index].Price;
+            }
+            var index = 0;
+            function NextClick(){
+               index++;
+               loadImage(index);
+            }
+            function PreviousClick(){
+                index--;
+                loadImage(index);
+            }
+            function SlideShow(){
+                var txtRange = document.getElementById("txtRange").value;
+                loadImage(txtRange);
+            }
+        </script>
+    </head>
+    <body class="container-fluid" onload="loadImage(0)">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3 id="lblName"></h3>
+            </div>
+            <div class="card-body text-center">
+                <button onclick="PreviousClick()" class="btn btn-outline-danger"> 
+                    <span>&lt;</span>
+                </button>
+                <img id="pic" width="500px" height="450px">
+                <button onclick="NextClick()" class="btn btn-outline-danger"> 
+                    <span>&gt;</span>
+                </button>
+            </div>
+            <div class="card-footer text-center">
+                <h3 id="lblPrice"></h3>
+                <input onchange="SlideShow()" class="form-control-range" id="txtRange" type="range" min="0" value="0" max="3">
+            </div>
+        </div>
+    </body>
+</html>

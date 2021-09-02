@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Java Script Output methods</title>
+        <script>
+            function bodyload(){
+               x= confirm("Are you sure want to delete...?");
+                if(x==true){
+                    document.write("Record Deleted");
+                }else{
+                    document.write("Canceled......!");
+                }
+                
+            }
+        </script>
+        <style>
+            body{
+                background-color:yellow;
+                color:black;
+                text-align:center;
+                font-size:25px;
+            
+            }
+        </style>
+    </head>
+    <body>
+        <button onclick="bodyload()">Deleted</button>
+    </body>
+</html>

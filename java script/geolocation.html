@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Geolocation</title>
+        <script>
+            function getlocation(){
+                if(navigator.geolocation){
+                    navigator.geolocation.getCurrentPosition(ShowLocation)
+                }
+            }
+            function ShowLocation(Position){
+                var mapholder = document.getElementById("mapholder");
+                mapholder.innerHTML = `Latitude:${position.coords.latitude} <br> Longitude:
+                ${position.coords.longitude}`
+            }
+        </script>
+    </head>
+    <body>
+        <p id="msg">Click to Get Location</p>
+        <button onclick="getlocation()">Display Map</button>
+        <div id="mapholder"></div>
+    </body>
+</html>

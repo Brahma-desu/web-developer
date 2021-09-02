@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Grid</title>
+        <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.css">
+        <link rel="stylesheet" href="../node_modules/font-awesome/css/font-awesome.css">
+        <style>
+            .container-fluid{
+                width: 90%;
+            }
+            #section{
+                height: 400px;
+                margin-top: 30px;
+            }
+            #navpanel{
+                border-right: 2px double;
+                
+            } 
+            
+        </style>
+    </head>
+    <body class="container-fluid">
+        <div class="row row-cols-9" id="header">
+            <div class="col align-self-start">
+                <h1 style="background-color: black; color:cornsilk; text-align:center"><span class="fa fa-shopping-cart"></span>Prajaya Shopping.com</h1>
+            </div>
+        </div>
+        <div class="row" id="section">
+            <div class="col-2" id="navpanel">
+                <ul>
+                    <li><span class="fa fa-home">Home</span></li>
+                    <li><span class="fa fa-electronics">Electronics</span></li>
+                    <li><span class="fa fa-footwear">Footwear</span></li>
+                </ul>
+            </div>
+            <div class="col-7">
+                <h2>Prajaya Home</h2>
+                <img src="../web developer/bootstrap/laptop.jpg" width="100" height="100">
+                <img src="../web developer/bootstrap/jbl.jpg" width="100" height="100">
+                <img src="../web developer/bootstrap/chair.jpg" width="100" height="100">
+                <img src="../web developer/bootstrap/mask.jpg" width="100" height="100">
+
+            </div>
+            <div class="col-3">
+                <h3>Your Cart Summary</h3>
+                <dl>
+                    <dt>Total Items</dt>
+                    <dd>3</dd>
+                    <dt>Total Amount</dt>
+                    <dd>&#8377; 5500.00</dd>
+                </dl>
+
+            </div>
+        </div><hr>
+        <div class="row" id="footer">
+            <div class="col">
+                <div class="text-center">&copy; Copyright Prajaya 2030</div>
+            </div>
+        </div>
+
+    </body>
+</html>

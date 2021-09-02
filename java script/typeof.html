@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>The JavaScript typeof Operator</h2>
+
+<p>The typeof operator returns the type of a variable, object, function or expression.</p>
+
+<p id="demo"></p>
+
+<script>
+document.getElementById("demo").innerHTML = 
+  typeof "john" + "<br>" +
+  typeof 3.14 + "<br>" +
+  typeof NaN + "<br>" +
+  typeof false + "<br>" +
+  typeof [1,2,3,4] + "<br>" +
+  typeof {name:'john', age:34} + "<br>" +
+  typeof new Date() + "<br>" +
+  typeof function () {} + "<br>" +
+  typeof myCar + "<br>" +
+  typeof null;
+</script>
+
+</body>
+</html>
+
+<hr>
+<script>
+    function f1(){
+       var product = {
+           Name:"TV",
+           Price:29000,
+           InStock:true,
+
+       }
+       document.write(`Type of Name:${typeof product.Name}<br>
+       Type of Price:${typeof product.Price}<br>
+       Type of Stock:${typeof product.InStock}`);
+    }
+    f1();
+</script>
+
+<hr>
+<script>
+    class Employee{
+
+    }
+   function f2(){
+        var pic = new Image();
+        var products = new Array();
+        var emp = new Employee();
+        document.write(`Pic is Employee :
+        ${pic instanceof Employee}&lt;br&gt;`);
+        document.write(`Pic is Image: ${pic
+        instanceof Image}&lt;br&gt;`);
+        document.write(`Emp is Array:
+        ${emp instanceof Array}&lt;br&gt;`);
+        document.write(`Emp is Employee:
+        ${emp instanceof Employee}&lt;br&gt;`);
+        document.write(`Emp is Object:
+        
+        ${emp instanceof Object}`);
+        }
+        f2();
+</script>
+<hr>
+<script>
+    class Student{
+
+    }
+    function f3(){
+        var product={
+            Name:"TV",
+            Price:3000,
+        };
+        var pic = new Image();
+        delete pic.src;    //invalid
+        delete math.PI;    //invalid
+        delete product.Price;
+        document.write(`Name=${product.Name}<br> Price=${product.Price}<br>`);
+        document.write(Math.PI);
+    }
+    f3();
+</script>
+
+
+
+
+
+
+
+

@@ -1,0 +1,24 @@
+<script>
+    function f1(){
+        var product = {
+            Name:"Dell",
+            Price:"59,99.00",
+            inStock:true,
+            Mfd:new Date("2020-04-12")
+        };
+        var months = ["January","Feb","March","Apr","May","Jun"];
+        var weekdays = ["Sun","Monday","Tue","Wednesday","Thus","Friday","Sat"];
+        product.Mfd.setFullYear(2021);
+        product.Mfd.setMonth(1);
+        product.Mfd.setDate(2);
+        
+        document.write(`Name=${product.Name}<br>Price=${product.Price}<br>inStock=${product.inStock}<br>
+        Manufactured Month:${months[product.Mfd.getMonth()]}<br>
+        Manufactured weekdays:${weekdays[product.Mfd.getDate()]}<br>
+        Manufactured Date:${product.Mfd.getDate()}<br>
+        
+        Manufactured Year:${product.Mfd.getFullYear()}<br>
+        Date:${product.Mfd.toDateString()}`);
+    }
+    f1();
+</script>

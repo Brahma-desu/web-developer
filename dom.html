@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Reference</title>
+        <script type="text/javascript">
+            function  bodyload(){
+                  document.getElementById("pic").src="../web developer/chair.jpg";
+                  document.getElementById("btnRegister").value="Register";
+            }
+        <style>
+                #txtName{
+                    background-color: rgb(67, 202, 74);
+                    color: rgb(255, 247, 247);
+                }
+                #btnRegister{
+                    background-color: cornflowerblue;
+                }
+        </style>
+    </head>
+    <body onload="bodyload()">
+        <div>
+            <img border="1px solid green" id="pic" width="100" height="100">
+        </div>
+        <div>
+
+            <h2>Register</h2>
+            <form id="frmRegister">
+                User Name:- 
+                <input id="txtName"  type="text">
+                <input id="btnRegister" type="button">
+            </form>
+        </div>
+    </body>
+</html>

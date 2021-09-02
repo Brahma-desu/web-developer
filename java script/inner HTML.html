@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>innerHTML</title>
+        <script>
+            function DeleteClick(){
+                x = confirm("Are you sure want to Delete..?");
+                if(x == true){
+                    document.getElementById("msg").innerHTML="<font color='black'>Record Deleted</font>";
+
+                                                /*outerHTML => Will add by replacing existing element.
+                                                 outerHTML ="<h2><font color='red'>Record Deleted</font></h2>" */
+                }else{
+                    alert("Canceled...");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="DeleteClick()">Delete</button>
+        <p align="center" id="msg"></p>
+    </body>
+</html>
